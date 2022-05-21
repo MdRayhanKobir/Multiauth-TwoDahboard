@@ -4,8 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Usermain\UsermainController;
 
-// User Main  logout Route
+// User all Route
 Route::get('/user/logout',[UsermainController::class,'Logout'])->name('user.logout');
+Route::get('/user/profile',[UsermainController::class,'UserProfile'])->name('user.profile');
+Route::get('/user/edit_profile',[UsermainController::class,'UserEditProfile'])->name('user.edit_profile');
+Route::post('/user/update/store',[UsermainController::class,'UserupdateProfile'])->name('user.update');
+
+
 // Admin logout Route
 Route::get('/admin/logout',[AdminController::class,'destroy'])->name('admin.logout');
 
