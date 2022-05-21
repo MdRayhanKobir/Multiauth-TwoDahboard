@@ -9,6 +9,8 @@ Route::get('/user/logout',[UsermainController::class,'Logout'])->name('user.logo
 Route::get('/user/profile',[UsermainController::class,'UserProfile'])->name('user.profile');
 Route::get('/user/edit_profile',[UsermainController::class,'UserEditProfile'])->name('user.edit_profile');
 Route::post('/user/update/store',[UsermainController::class,'UserupdateProfile'])->name('user.update');
+Route::get('/user/update',[UsermainController::class,'UserPassword'])->name('user.pass_view');
+Route::post('/user/password/update',[UsermainController::class,'UpdatePassword'])->name('update.password');
 
 
 // Admin logout Route
