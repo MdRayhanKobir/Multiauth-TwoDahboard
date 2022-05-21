@@ -40,7 +40,11 @@ class UsermainController extends Controller
 
          }
          $data->save();
+         $notification=array(
+             'message'=>"successfully updated",
+             'alert-type'=>"success"
+         );
 
-         return redirect()->route('user.profile');
+         return redirect()->route('user.profile')->with( $notification);
      }
 }
